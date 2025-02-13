@@ -56,7 +56,7 @@ pipeline {
                     writeFile file: 'sonar-project.properties', text: sonarProperties
 
                     // Run SonarQube scan using the properties file
-                    withSonarQubeEnv('sonarqube_scanner') {
+                    withSonarQubeEnv('sonarqube_server') {
                         bat "${scannerHome}/bin/sonar-scanner -Dproject.settings=sonar-project.properties"
                     }
                   }
