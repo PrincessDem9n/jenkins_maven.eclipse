@@ -36,8 +36,8 @@ pipeline {
 
                     // Prepare SonarQube environment
                     def sonarProperties = """
-                        sonar.projectKey=maven-project-jenkins-lab2
-                        sonar.projectName=maven-project-jenkins-lab2-name
+                        sonar.projectKey=maven-project-jenkins-lab
+                        sonar.projectName=maven-project-jenkins-lab-name
                         sonar.projectVersion=1.0
                         sonar.sources=src/main
                         sonar.sourceEncoding=UTF-8
