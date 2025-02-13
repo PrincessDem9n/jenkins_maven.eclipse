@@ -3,8 +3,7 @@ pipeline {
 	tools{
 		maven 'maven 3.9.9'
 		jdk 'Java JDK 17'
-		sonarqube scanner 'sonarqube_scanner'
-	}
+		}
 	//Declare stages clean, test and install
 	//splitting it in different stages so that
 	//based on the different plugins, we can view the test results based onstages
