@@ -3,6 +3,7 @@ pipeline {
 	tools{
 		maven 'maven 3.9.9'
 		jdk 'Java JDK 17'
+		sonar 'sonarqube_scanner'
 	}
 	// Declare stages clean, test and install
 	//splitting it in different stages so that
@@ -27,6 +28,13 @@ pipeline {
 			steps{
 				echo "Start build"
 				bat "mvn install -DskipTests"
+			}
+		}
+		stage("sonar"){
+			steps{
+				echo "Start Sonarqube"
+				bat "sonarqube"
+				
 			}
 		}
 	}
