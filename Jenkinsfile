@@ -33,7 +33,7 @@ pipeline {
 		stage("sonar"){
 			steps{
 				echo "Start Sonarqube"
-				bat "sonarqube"
+				bat "mvn sonar"
 				
 			}
 		}
