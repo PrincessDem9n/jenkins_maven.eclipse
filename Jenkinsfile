@@ -32,7 +32,7 @@ pipeline {
 		stage("sonar") {
             steps {
                 script {
-                    def scannerHome = tool 'sonarqube-scanner'
+                    def scannerHome = tool 'sonarqube_server'
 
                     // Prepare SonarQube environment
                     def sonarProperties = """
